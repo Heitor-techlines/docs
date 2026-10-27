@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Ajuda - Wolly</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; color: #1E293B; }
+        .wolly-green-text { color: #00D78E; }
+        .wolly-green-bg { background-color: #00D78E; }
+        .wolly-border { border-color: #E2E8F0; }
+        /* Scrollbar suave para a barra lateral */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 3px; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Cabeçalho -->
+    <header class="border-b wolly-border bg-white sticky top-0 z-20 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-6">
+                <a href="https://wolly.techl.com.br" class="flex items-center gap-2 hover:opacity-80 transition">
+                    <span class="text-2xl font-bold text-gray-900 tracking-tight">Wolly<span class="wolly-green-text">.</span></span>
+                </a>
+                <span class="text-sm font-semibold text-gray-400 hidden sm:inline-block" data-pt="Central de Ajuda" data-en="Help Center" data-es="Centro de Ayuda">Central de Ajuda</span>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <!-- Botão de Troca de Idioma -->
+                <button onclick="toggleLanguage()" id="lang-btn" class="flex items-center gap-2 text-sm font-semibold text-gray-700 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-full transition">
+                    <span id="flag-icon">🇧🇷</span> <span id="lang-text" class="hidden sm:inline">Português</span>
+                </button>
+                
+                <a href="https://wolly.techl.com.br" class="text-sm font-semibold text-gray-600 hover:text-gray-900 bg-white border border-gray-300 px-3 py-1.5 rounded-full transition hidden sm:block" data-pt="Voltar" data-en="Back" data-es="Volver">
+                    Voltar
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Layout Principal -->
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row min-h-screen">
+        
+        <!-- Barra Lateral (Navegação) -->
+        <aside class="w-full md:w-64 shrink-0 md:border-r wolly-border bg-white md:bg-transparent sticky top-[73px] md:h-[calc(100vh-73px)] overflow-y-auto hidden md:block">
+            <nav class="p-6 space-y-2 text-sm font-medium text-gray-600">
+                <a href="#intro" class="block py-2 px-3 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition" data-pt="Introdução" data-en="Introduction" data-es="Introducción">Introdução</a>
+                <a href="#conta" class="block py-2 px-3 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition" data-pt="Criando sua conta" data-en="Creating your account" data-es="Creando tu cuenta">Criando sua conta</a>
+                <a href="#formatos" class="block py-2 px-3 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition" data-pt="Formatos de post" data-en="Post formats" data-es="Formatos de publicación">Formatos de post</a>
+                <a href="#publicando" class="block py-2 px-3 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition" data-pt="Publicando" data-en="Publishing" data-es="Publicando">Publicando</a>
+                <a href="#interagindo" class="block py-2 px-3 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition" data-pt="Interagindo" data-en="Interacting" data-es="Interactuando">Interagindo</a>
+                <a href="#creators" class="block py-2 px-3 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition" data-pt="Wolly Creators" data-en="Wolly Creators" data-es="Wolly Creators">Wolly Creators</a>
+                <a href="#seguranca" class="block py-2 px-3 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition" data-pt="Segurança e Safe Mode" data-en="Safety and Safe Mode" data-es="Seguridad y Safe Mode">Segurança e Safe Mode</a>
+                <a href="#verificacao" class="block py-2 px-3 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition" data-pt="Verificação" data-en="Verification" data-es="Verificación">Verificação</a>
+            </nav>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="flex-1 p-6 md:p-10 lg:p-12 max-w-3xl">
+            
+            <div class="space-y-12 text-sm md:text-base leading-relaxed text-gray-700">
+                
+                <!-- Introdução -->
+                <section id="intro">
+                    <h1 class="text-2xl font-bold text-gray-900 mb-4" data-pt="O que é o Wolly" data-en="What is Wolly" data-es="Qué es Wolly">O que é o Wolly</h1>
+                    <p data-pt="O Wolly é uma rede social feita para você publicar do seu jeito. Em vez de um único formato, o Wolly tem 9 formatos diferentes. Você escolhe o formato, publica, e quem te segue vê. O Feed Livre é aleatório, mas você pode usar o 'Personalizar' se quiser um feed com algoritmo." data-en="Wolly is a social network designed for you to publish your way. Instead of a single format, Wolly has 9 different formats. You choose the format, publish, and your followers see it. The Free Feed is random, but you can use 'Customize' if you want an algorithmic feed." data-es="Wolly es una red social diseñada para que publiques a tu manera. En lugar de un solo formato, Wolly tiene 9 formatos diferentes. Eliges el formato, publicas y tus seguidores lo ven. El Feed Libre es aleatorio, pero puedes usar 'Personalizar' si quieres un feed con algoritmo.">O Wolly é uma rede social feita para você publicar do seu jeito. Em vez de um único formato, o Wolly tem 9 formatos diferentes. Você escolhe o formato, publica, e quem te segue vê. O Feed Livre é aleatório, mas você pode usar o "Personalizar" se quiser um feed com algoritmo.</p>
+                </section>
+
+                <!-- Criando conta -->
+                <section id="conta">
+                    <h2 class="text-xl font-bold text-gray-900 mb-4 border-b wolly-border pb-2" data-pt="Criando sua conta" data-en="Creating your account" data-es="Creando tu cuenta">Criando sua conta</h2>
+                    <ol class="list-decimal pl-5 space-y-2">
+                        <li data-pt="Acesse o site do Wolly ou baixe o app na <strong>Google Play Store</strong> (desenvolvido por Tech Lines LLC)." data-en="Access the Wolly website or download the app on the <strong>Google Play Store</strong> (developed by Tech Lines LLC)." data-es="Accede al sitio web de Wolly o descarga la aplicación en <strong>Google Play Store</strong> (desarrollada por Tech Lines LLC).">Acesse o site do Wolly ou baixe o app na <strong>Google Play Store</strong> (desenvolvido por Tech Lines LLC).</li>
+                        <li data-pt="Toque em 'Criar conta'." data-en="Tap 'Create account'." data-es="Toca 'Crear cuenta'.">Toque em "Criar conta".</li>
+                        <li data-pt="Preencha: Nome, Username, Data de nascimento (mínimo 13 anos), E-mail e Senha." data-en="Fill in: Name, Username, Date of birth (minimum 13 years old), Email and Password." data-es="Rellena: Nombre, Nombre de usuario, Fecha de nacimiento (mínimo 13 años), Correo electrónico y Contraseña.">Preencha: Nome, Username, Data de nascimento (mínimo 13 anos), E-mail e Senha.</li>
+                        <li data-pt="Se você tiver entre 13 e 15 anos, precisará informar o e-mail de um responsável para ativar o Safe Mode." data-en="If you are between 13 and 15 years old, you will need to provide a guardian's email to activate Safe Mode." data-es="Si tienes entre 13 y 15 años, deberás proporcionar el correo electrónico de un tutor para activar el Safe Mode.">Se você tiver entre 13 e 15 anos, precisará informar o e-mail de um responsável para ativar o Safe Mode.</li>
+                    </ol>
+                </section>
+
+                <!-- Formatos -->
+                <section id="formatos">
+                    <h2 class="text-xl font-bold text-gray-900 mb-4 border-b wolly-border pb-2" data-pt="Conhecendo os formatos" data-en="Understanding the formats" data-es="Conociendo los formatos">Conhecendo os formatos</h2>
+                    <ul class="space-y-3">
+                        <li><strong data-pt="Pulse:" data-en="Pulse:" data-es="Pulse:">Pulse:</strong> <span data-pt="Texto (até 1400 caracteres)." data-en="Text (up to 1400 characters)." data-es="Texto (hasta 1400 caracteres).">Texto (até 1400 caracteres).</span></li>
+                        <li><strong data-pt="Gramp:" data-en="Gramp:" data-es="Gramp:">Gramp:</strong> <span data-pt="Imagem + legenda + tema." data-en="Image + caption + theme." data-es="Imagen + leyenda + tema.">Imagem + legenda + tema.</span></li>
+                        <li><strong data-pt="Clip:" data-en="Clip:" data-es="Clip:">Clip:</strong> <span data-pt="Vídeo vertical de até 90 segundos (15 segundos se estiver no Safe Mode)." data-en="Vertical video up to 90 seconds (15 seconds in Safe Mode)." data-es="Video vertical de hasta 90 segundos (15 segundos en Safe Mode).">Vídeo vertical de até 90 segundos (15 segundos se estiver no Safe Mode).</span></li>
+                        <li><strong data-pt="Post It:" data-en="Post It:" data-es="Post It:">Post It:</strong> <span data-pt="Imagem + texto que expira em 24 horas." data-en="Image + text that expires in 24 hours." data-es="Imagen + texto que caduca en 24 horas.">Imagem + texto que expira em 24 horas.</span></li>
+                        <li><strong data-pt="Clop:" data-en="Clop:" data-es="Clop:">Clop:</strong> <span data-pt="Carrossel de até 5 imagens." data-en="Carousel of up to 5 images." data-es="Carrusel de hasta 5 imágenes.">Carrossel de até 5 imagens.</span></li>
+                        <li><strong data-pt="Wave:" data-en="Wave:" data-es="Wave:">Wave:</strong> <span data-pt="Transmissão ao vivo (requer aprovação da Tech Lines)." data-en="Live stream (requires Tech Lines approval)." data-es="Transmisión en vivo (requiere aprobación de Tech Lines).">Transmissão ao vivo (requer aprovação da Tech Lines).</span></li>
+                        <li><strong data-pt="Desafio:" data-en="Challenge:" data-es="Desafío:">Desafio:</strong> <span data-pt="Desafio da comunidade." data-en="Community challenge." data-es="Desafío de la comunidad.">Desafio da comunidade.</span></li>
+                        <li><strong data-pt="Search:" data-en="Search:" data-es="Search:">Search:</strong> <span data-pt="Enquete." data-en="Poll." data-es="Encuesta.">Enquete.</span></li>
+                        <li><strong data-pt="Series:" data-en="Series:" data-es="Series:">Series:</strong> <span data-pt="Playlist de conteúdo (agrupa seus posts)." data-en="Content playlist (groups your posts)." data-es="Lista de reproducción de contenido (agrupa tus publicaciones).">Playlist de conteúdo (agrupa seus posts).</span></li>
+                    </ul>
+                </section>
+
+                <!-- Publicando -->
+                <section id="publicando">
+                    <h2 class="text-xl font-bold text-gray-900 mb-4 border-b wolly-border pb-2" data-pt="Publicando seu primeiro post" data-en="Publishing your first post" data-es="Publicando tu primera publicación">Publicando seu primeiro post</h2>
+                    <ol class="list-decimal pl-5 space-y-2">
+                        <li data-pt="Toque no botão '+'." data-en="Tap the '+' button." data-es="Toca el botón '+'.">Toque no botão "+".</li>
+                        <li data-pt="Escolha o formato." data-en="Choose the format." data-es="Elige el formato.">Escolha o formato.</li>
+                        <li data-pt="Preencha o conteúdo." data-en="Fill in the content." data-es="Rellena el contenido.">Preencha o conteúdo.</li>
+                        <li data-pt="Escolha um tema e adicione hashtags (basta digitar # direto no corpo do texto)." data-en="Choose a theme and add hashtags (just type # directly in the text body)." data-es="Elige un tema y añade hashtags (solo escribe # directamente en el cuerpo del texto).">Escolha um tema e adicione hashtags (basta digitar # direto no corpo do texto).</li>
+                        <li data-pt="Toque em 'Publicar'." data-en="Tap 'Publish'." data-es="Toca 'Publicar'.">Toque em "Publicar".</li>
+                    </ol>
+                </section>
+
+                <!-- Interagindo -->
+                <section id="interagindo">
+                    <h2 class="text-xl font-bold text-gray-900 mb-4 border-b wolly-border pb-2" data-pt="Interagindo" data-en="Interacting" data-es="Interactuando">Interagindo</h2>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li data-pt="<strong>Curtir:</strong> Toque no coração (gera Crowns para o autor do post)." data-en="<strong>Like:</strong> Tap the heart (generates Crowns for the post author)." data-es="<strong>Me gusta:</strong> Toca el corazón (genera Crowns para el autor de la publicación)."><strong>Curtir:</strong> Toque no coração (gera Crowns para o autor do post).</li>
+                        <li data-pt="<strong>Comentar:</strong> Toque no balão." data-en="<strong>Comment:</strong> Tap the balloon." data-es="<strong>Comentar:</strong> Toca el globo."><strong>Comentar:</strong> Toque no balão.</li>
+                        <li data-pt="<strong>Salvar:</strong> Toque no marcador." data-en="<strong>Save:</strong> Tap the bookmark." data-es="<strong>Guardar:</strong> Toca el marcador."><strong>Salvar:</strong> Toque no marcador.</li>
+                        <li data-pt="<strong>Compartilhar:</strong> Toque na seta." data-en="<strong>Share:</strong> Tap the arrow." data-es="<strong>Compartir:</strong> Toca la flecha."><strong>Compartilhar:</strong> Toque na seta.</li>
+                        <li data-pt="<strong>Mensagem (DM):</strong> Qualquer pessoa pode enviar mensagens, exceto para contas em Safe Mode ou perfis privados (que exigem aprovação de seguidor)." data-en="<strong>Message (DM):</strong> Anyone can send messages, except to Safe Mode accounts or private profiles (which require follower approval)." data-es="<strong>Mensaje (DM):</strong> Cualquiera puede enviar mensajes, excepto a cuentas en Safe Mode o perfiles privados (que requieren aprobación de seguidor)."><strong>Mensagem (DM):</strong> Qualquer pessoa pode enviar mensagens, exceto para contas em Safe Mode ou perfis privados (que exigem aprovação de seguidor).</li>
+                    </ul>
+                </section>
+
+                <!-- Creators -->
+                <section id="creators" class="bg-gray-50 border wolly-border p-5 rounded-xl">
+                    <h2 class="text-xl font-bold text-gray-900 mb-3" data-pt="Wolly Creators" data-en="Wolly Creators" data-es="Wolly Creators">Wolly Creators</h2>
+                    <p class="mb-2" data-pt="O Wolly possui duas versões do painel de criadores:" data-en="Wolly has two versions of the creator dashboard:" data-es="Wolly tiene dos versiones del panel de creador:">O Wolly possui duas versões do painel de criadores:</p>
+                    <ul class="list-disc pl-5 space-y-2 mb-3">
+                        <li data-pt="<strong>Resumo:</strong> Fica dentro do app, na aba Creators." data-en="<strong>Summary:</strong> Located inside the app, in the Creators tab." data-es="<strong>Resumen:</strong> Se encuentra dentro de la aplicación, en la pestaña Creators."><strong>Resumo:</strong> Fica dentro do app, na aba Creators.</li>
+                        <li data-pt="<strong>Completo:</strong> Fica em <code>creators.techl.com.br</code>, com métricas detalhadas de Alcance, Engajamento, Seguidores e Melhores Posts." data-en="<strong>Full:</strong> Located at <code>creators.techl.com.br</code>, with detailed metrics for Reach, Engagement, Followers and Best Posts." data-es="<strong>Completo:</strong> Se encuentra en <code>creators.techl.com.br</code>, con métricas detalladas de Alcance, Compromiso, Seguidores y Mejores Publicaciones."><strong>Completo:</strong> Fica em <code>creators.techl.com.br</code>, com métricas detalhadas de Alcance, Engajamento, Seguidores e Melhores Posts.</li>
+                    </ul>
+                    <p data-pt="As Crowns (curtidas) são acumuladas pelo autor do post." data-en="Crowns (likes) are accumulated by the post author." data-es="Las Crowns (me gusta) son acumuladas por el autor de la publicación.">As Crowns (curtidas) são acumuladas pelo autor do post.</p>
+                </section>
+
+                <!-- Segurança -->
+                <section id="seguranca">
+                    <h2 class="text-xl font-bold text-gray-900 mb-4 border-b wolly-border pb-2" data-pt="Segurança e Safe Mode" data-en="Safety and Safe Mode" data-es="Seguridad y Safe Mode">Segurança e Safe Mode</h2>
+                    <p class="mb-4" data-pt="Usuários de 13 a 15 anos entram no Safe Mode: o perfil é privado, não há curtidas/comentários, sem DMs e o Clip é limitado a 15 segundos." data-en="Users aged 13 to 15 enter Safe Mode: the profile is private, there are no likes/comments, no DMs, and Clips are limited to 15 seconds." data-es="Los usuarios de 13 a 15 años entran en Safe Mode: el perfil es privado, no hay me gusta/comentarios, sin DMs y el Clip está limitado a 15 segundos.">Usuários de 13 a 15 anos entram no Safe Mode: o perfil é privado, não há curtidas/comentários, sem DMs e o Clip é limitado a 15 segundos.</p>
+                    
+                    <div class="space-y-3">
+                        <p data-pt="<strong>Para denunciar um conteúdo:</strong> toque nos três pontinhos no post e escolha 'Denunciar'." data-en="<strong>To report content:</strong> tap the three dots on the post and choose 'Report'." data-es="<strong>Para denunciar contenido:</strong> toca los tres puntos en la publicación y elige 'Denunciar'."><strong>Para denunciar um conteúdo:</strong> toque nos três pontinhos no post e escolha "Denunciar".</p>
+                        <p data-pt="<strong>Para bloquear alguém:</strong> toque nos três pontinhos no perfil da pessoa e escolha 'Bloquear'." data-en="<strong>To block someone:</strong> tap the three dots on the person's profile and choose 'Block'." data-es="<strong>Para bloquear a alguien:</strong> toca los tres puntos en el perfil de la persona y elige 'Bloquear'."><strong>Para bloquear alguém:</strong> toque nos três pontinhos no perfil da pessoa e escolha "Bloquear".</p>
+                    </div>
+                </section>
+
+                <!-- Verificação -->
+                <section id="verificacao">
+                    <h2 class="text-xl font-bold text-gray-900 mb-4 border-b wolly-border pb-2" data-pt="Verificação de perfil" data-en="Profile verification" data-es="Verificación de perfil">Verificação de perfil</h2>
+                    <p class="mb-4" data-pt="Perfis verificados têm um <strong>selo verde</strong> ao lado do nome. A verificação é feita por curadoria (figuras públicas, criadores consistentes, marcas). O Wolly não cobra por verificação." data-en="Verified profiles have a <strong>green badge</strong> next to the name. Verification is done through curation (public figures, consistent creators, brands). Wolly does not charge for verification." data-es="Los perfiles verificados tienen una <strong>insignia verde</strong> junto al nombre. La verificación se realiza mediante curación (figuras públicas, creadores consistentes, marcas). Wolly no cobra por la verificación.">Perfis verificados têm um <strong>selo verde</strong> ao lado do nome. A verificação é feita por curadoria (figuras públicas, criadores consistentes, marcas). O Wolly não cobra por verificação.</p>
+                </section>
+
+                <!-- Contato -->
+                <section class="border-t wolly-border pt-8 mt-12">
+                    <h2 class="text-xl font-bold text-gray-900 mb-3" data-pt="Contato" data-en="Contact" data-es="Contacto">Contato</h2>
+                    <ul class="space-y-2">
+                        <li data-pt="<strong>E-mail:</strong> <span class='wolly-green-text'>empresa@techl.com.br</span>" data-en="<strong>Email:</strong> <span class='wolly-green-text'>empresa@techl.com.br</span>" data-es="<strong>Correo electrónico:</strong> <span class='wolly-green-text'>empresa@techl.com.br</span>"><strong>E-mail:</strong> <span class="wolly-green-text">empresa@techl.com.br</span></li>
+                        <li data-pt="<strong>Na plataforma:</strong> @tech_lines" data-en="<strong>On the platform:</strong> @tech_lines" data-es="<strong>En la plataforma:</strong> @tech_lines"><strong>Na plataforma:</strong> @tech_lines</li>
+                    </ul>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="border-t wolly-border mt-12 py-8 text-center text-sm text-gray-500 bg-white">
+        <p data-pt="&copy; 2026 Tech Lines LLC. Todos os direitos reservados." data-en="&copy; 2026 Tech Lines LLC. All rights reserved." data-es="&copy; 2026 Tech Lines LLC. Todos los derechos reservados.">&copy; 2026 Tech Lines LLC. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Lógica de Troca de Idioma (PT -> EN -> ES) -->
+    <script>
+        const languages = [
+            { code: 'pt', label: 'Português', flag: '🇧🇷', htmlLang: 'pt-BR' },
+            { code: 'en', label: 'English', flag: '🇺🇸', htmlLang: 'en' },
+            { code: 'es', label: 'Español', flag: '🇪🇸', htmlLang: 'es' }
+        ];
+        
+        let currentIndex = 0;
+
+        function toggleLanguage() {
+            // Avança para o próximo idioma
+            currentIndex = (currentIndex + 1) % languages.length;
+            const lang = languages[currentIndex];
+
+            // Atualiza o botão
+            document.getElementById('lang-text').innerText = lang.label;
+            document.getElementById('flag-icon').innerText = lang.flag;
+            document.documentElement.lang = lang.htmlLang;
+
+            // Atualiza todos os elementos que têm o atributo data-[idioma]
+            const elements = document.querySelectorAll('[data-pt]');
+            elements.forEach(el => {
+                if (el.hasAttribute(`data-${lang.code}`)) {
+                    el.innerHTML = el.getAttribute(`data-${lang.code}`);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
